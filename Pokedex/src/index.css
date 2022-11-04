@@ -8,3 +8,10 @@ body {
   font-size: 16px;
   font-family: sans-serif;
 }
+
+.container{
+  max-width: 1024px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+}
