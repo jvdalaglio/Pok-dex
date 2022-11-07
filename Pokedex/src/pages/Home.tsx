@@ -9,7 +9,7 @@ export function Home() {
       <h1 className="title">Encontre todos os pokémons em um só lugar</h1>
 
       <div className="list">
-        <CardPokemon />
+        <CardPokemon id={15} name="João"/>
       </div>
     </>
   );
