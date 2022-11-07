@@ -1,4 +1,5 @@
 import { Nav } from "../components/Nav/Nav";
+import "./Home.css";
 
 export function Home() {
   return (
