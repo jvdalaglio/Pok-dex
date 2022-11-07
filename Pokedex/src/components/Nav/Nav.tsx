@@ -1,10 +1,14 @@
 import "./Nav.css"
 
-export function Nav() {
+type NavProps = {
+  hasGoBack?: boolean;
+}
+
+export function Nav(props: NavProps) {
   return (
     <nav className="nav">
       <a href="#" className="brand">Pokédex</a>
-      <a href="#" className="btn-goBack">voltar</a>
+      {props.hasGoBack && (<a href="#" className="btn-goBack">voltar</a>)}
     </nav>
   )
 }

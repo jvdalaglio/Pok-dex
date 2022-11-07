@@ -1,3 +1,7 @@
+import { Nav } from "../components/Nav/Nav";
+
 export function Details() {
-  return <h1>Details</h1>
+  return (
+    <Nav hasGoBack={true} />
+  );
 }
