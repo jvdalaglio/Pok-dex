@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-decoration: none;
+  color: #17171B;
+}
+
+.btn-goBack {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #747476;
+  text-decoration: none;
+}
