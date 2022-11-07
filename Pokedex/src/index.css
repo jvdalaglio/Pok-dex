@@ -9,6 +9,10 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container{
   max-width: 1024px;
   min-height: 100vh;
