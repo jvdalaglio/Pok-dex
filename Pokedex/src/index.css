@@ -18,4 +18,8 @@ a {
   min-height: 100vh;
   margin: 0 auto;
   padding: 2rem;
+
+  background-image: url(./assets/Pokeball.png);
+  background-repeat: no-repeat;
+  background-position: top right;
 }
