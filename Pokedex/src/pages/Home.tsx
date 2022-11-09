@@ -11,9 +11,9 @@ export function Home() {
       <h1 className="title">Encontre todos os pokémons em um só lugar</h1>
 
       <div className="list">
-        {pokemons.map(pokemon => {
-          return <CardPokemon id={pokemon.id} name={pokemon.name}/>
-          })}
+        {pokemons.map((pokemon, index) => {
+          return <CardPokemon key={index} id={pokemon.id} name={pokemon.name}/>
+          })} 
       </div>
     </>
   );
