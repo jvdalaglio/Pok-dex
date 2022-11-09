@@ -12,7 +12,7 @@ export function Home() {
 
       <div className="list">
         {pokemons.map((pokemon, index) => {
-          return <CardPokemon key={index} id={pokemon.id} name={pokemon.name}/>
+          return <CardPokemon key={index} id={pokemon.id} name={pokemon.name} types={pokemon.types} />
           })} 
       </div>
     </>

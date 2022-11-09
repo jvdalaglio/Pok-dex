@@ -31,3 +31,58 @@
   top: -35px;
   right: 10px;
 }
+
+.card.type--bug {
+  background-color: #8bd674;
+}
+.card.type--dark {
+  background-color: #6f6e78;
+}
+.card.type--dragon {
+  background-color: #7383b9;
+}
+.card.type--electric {
+  background-color: #f2cb55;
+}
+.card.type--fairy {
+  background-color: #eba8c3;
+}
+.card.type--fighting {
+  background-color: #eb4971;
+}
+.card.type--fire {
+  background-color: #ffa756;
+}
+.card.type--flying {
+  background-color: #83a2e3;
+}
+.card.type--ghost {
+  background-color: #8571be;
+}
+.card.type--grass {
+  background-color: #8bbe8a;
+}
+.card.type--ground {
+  background-color: #f78551;
+}
+.card.type--ice {
+  background-color: #91d8df;
+}
+.card.type--noemal {
+  background-color: #b5b9c4;
+}
+.card.type--poison {
+  background-color: #9f6e97;
+}
+.card.type--psychic {
+  background-color: #ff6568;
+}
+.card.type--rock {
+  background-color: #d4c294;
+}
+.card.type--steel {
+  background-color: #4c91b2;
+}
+.card.type--water {
+  background-color: #58abf6;
+}
