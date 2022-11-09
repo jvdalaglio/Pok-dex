@@ -38,7 +38,7 @@
 .card.type--ice {
   background-color: #91d8df;
 }
-.card.type--noemal {
+.card.type--normal {
   background-color: #b5b9c4;
 }
 .card.type--poison {
