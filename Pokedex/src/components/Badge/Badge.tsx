@@ -1,7 +1,11 @@
 import "./Badge.css"
 
-export function Badge() {
+type BadgeProps = {
+  name: string;
+}
+
+export function Badge(props: BadgeProps) {
   return (
-    <p>Tipo</p>
+    <p>{props.name}</p>
   );
 }
