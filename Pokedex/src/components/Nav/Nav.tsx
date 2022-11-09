@@ -1,4 +1,6 @@
 import "./Nav.css"
+import {Link} from "react-router-dom"
+
 
 type NavProps = {
   hasGoBack?: boolean;
@@ -7,8 +9,8 @@ type NavProps = {
 export function Nav(props: NavProps) {
   return (
     <nav className="nav">
-      <a href="#" className="brand">Pokédex</a>
-      {props.hasGoBack && (<a href="#" className="btn-goBack">voltar</a>)}
+      <Link to="/" className="brand">Pokédex</Link>
+      {props.hasGoBack && (<Link to="/" className="btn-goBack">voltar</Link>)}
     </nav>
   )
 }
