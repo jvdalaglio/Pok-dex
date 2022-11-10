@@ -6,6 +6,6 @@ type BadgeProps = {
 
 export function Badge(props: BadgeProps) {
   return (
-    <p>{props.name}</p>
+    <span className="badge">{props.name}</span>
   );
 }
