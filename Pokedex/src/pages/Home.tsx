@@ -3,6 +3,7 @@ import { Nav } from "../components/Nav/Nav";
 import { CardPokemon, CardPokemonProps } from "../components/CardPokemon/CardPokemon";
 import "./Home.css";
 import { api } from "../services/api";
+import { Loading } from "../components/Loading/Loading";
 
 export function Home() {
 
@@ -36,7 +37,9 @@ export function Home() {
   }, [])
 
   if (isLoading) {
-    return null;
+    return (
+      <Loading />
+    );
   }
 
   return (
