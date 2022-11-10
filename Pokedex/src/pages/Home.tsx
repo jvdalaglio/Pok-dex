@@ -10,7 +10,7 @@ export function Home() {
   const[pokemonList, setPokemonList] = useState<CardPokemonProps[]>([]);
  
   async function getPokemonData() {
-    const {data} = await api.get("/pokemon?limit=1");
+    const {data} = await api.get("/pokemon?limit=151");
 
     const dadosCompletos = await Promise.all(
       data.results.map(async (result: {url: string}) => {
@@ -24,7 +24,9 @@ export function Home() {
       };
     }));
 
-    // setPokemonList();
+    console.log(dadosCompletos)
+
+    setPokemonList(dadosCompletos);
 
     setIsLoading(false);
 }
