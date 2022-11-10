@@ -1,5 +1,4 @@
 .badge {
-  background: #62b957;
   padding: 5px;
   border-radius: 3px;
   color: white;
@@ -42,7 +41,7 @@
 .type--ice {
   background-color: #61cec0;
 }
-.type--noemal {
+.type--normal {
   background-color: #9da0aa;
 }
 .type--poison {
