@@ -1,5 +1,6 @@
 import "./Nav.css"
 import {Link} from "react-router-dom"
+import {BtnGoBack, NavBar} from "./Nav.style"
 
 
 type NavProps = {
@@ -8,9 +9,9 @@ type NavProps = {
 
 export function Nav(props: NavProps) {
   return (
-    <nav className="nav">
+    <NavBar className="nav">
       <Link to="/" className="brand">Pokédex</Link>
-      {props.hasGoBack && (<Link to="/" className="btn-goBack">voltar</Link>)}
-    </nav>
+      {props.hasGoBack && (<BtnGoBack to="/">voltar</BtnGoBack>)}
+    </NavBar>
   )
 }

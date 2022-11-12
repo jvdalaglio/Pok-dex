@@ -1,19 +1,22 @@
-.nav {
+import styled from "styled-components";
+import {Link} from "react-router-dom"
+
+export const NavBar = styled.nav `
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.brand {
+  & > .brand { 
   font-weight: 400;
   font-size: 24px;
   line-height: 31px;
   color: #17171B;
-}
+  }
+`
 
-.btn-goBack {
+export const BtnGoBack = styled(Link)`
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: #747476;
-}
+`
