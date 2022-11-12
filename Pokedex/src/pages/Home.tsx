@@ -17,15 +17,12 @@ export function Home() {
       data.results.map(async (result: {url: string}) => {
       const {data} = await api.get(result.url);
 
-
       return {
         id:data.id,
         name: data.name,
         types: data.types,
       };
     }));
-
-    console.log(dadosCompletos)
 
     setPokemonList(dadosCompletos);
 

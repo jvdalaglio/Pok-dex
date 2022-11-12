@@ -1,61 +1,63 @@
-.badge {
-  padding: 5px;
-  border-radius: 3px;
-  color: white;
-  margin-right: 5px;
-}
+import styled from "styled-components"
 
-.type--bug {
+export const Container = styled.span `
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    margin-right: 5px;
+
+&.type--bug {
   background-color: #8cb230;
 }
-.type--dark {
+&.type--dark {
   background-color: #58575f;
 }
-.type--dragon {
+&.type--dragon {
   background-color: #0f6ac0;
 }
-.type--electric {
+&.type--electric {
   background-color: #eed535;
 }
-.type--fairy {
+&.type--fairy {
   background-color: #ed6ec7;
 }
-.type--fighting {
+&.type--fighting {
   background-color: #d04164;
 }
-.type--fire {
+&.type--fire {
   background-color: #fd7d24;
 }
-.type--flying {
+&.type--flying {
   background-color: #748fc9;
 }
-.type--ghost {
+&.type--ghost {
   background-color: #556aae;
 }
-.type--grass {
+&.type--grass {
   background-color: #62b957;
 }
-.type--ground {
+&.type--ground {
   background-color: #dd7748;
 }
-.type--ice {
+&.type--ice {
   background-color: #61cec0;
 }
-.type--normal {
+&.type--normal {
   background-color: #9da0aa;
 }
-.type--poison {
+&.type--poison {
   background-color: #a552cc;
 }
-.type--psychic {
+&.type--psychic {
   background-color: #a552cc;
 }
-.type--rock {
+&.type--rock {
   background-color: #baab82;
 }
-.type--steel {
+&.type--steel {
   background-color: #4a90da;
 }
-.type--water {
+&.type--water {
   background-color: #4a90da;
 }
+`

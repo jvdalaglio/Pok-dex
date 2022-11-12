@@ -1,4 +1,4 @@
-import "./Badge.css"
+import {Container} from "./Badge.style"
 
 type BadgeProps = {
   name: string;
@@ -6,6 +6,6 @@ type BadgeProps = {
 
 export function Badge(props: BadgeProps) {
   return (
-    <span className={`badge type--${props.name.toLowerCase()}`}>{props.name}</span>
+    <Container className={`badge type--${props.name.toLowerCase()}`}>{props.name}</Container>
   );
 }
