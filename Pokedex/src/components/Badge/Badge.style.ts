@@ -1,10 +1,11 @@
 import styled from "styled-components"
 
-export const Container = styled.span `
+export const Container = styled.span`
+    display: inline-block;
     padding: 5px;
     border-radius: 3px;
     color: white;
-    margin-right: 5px;
+    margin-right: 4px;
 
 &.type--bug {
   background-color: #8cb230;
