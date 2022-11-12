@@ -1,4 +1,3 @@
-import "./Nav.css"
 import {Link} from "react-router-dom"
 import {BtnGoBack, NavBar} from "./Nav.style"
 
