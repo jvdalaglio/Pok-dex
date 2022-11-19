@@ -1,12 +1,12 @@
-import "./Loading.css"
+import { LoadingStyle } from "./Loading.style"
 
 export function Loading() {
   return (
-    <main className="loading-page">
+    <LoadingStyle className="loading-page">
         <div className="loading">
           <img src="/src/assets/pokeball.gif" alt="" />
           <h1>Loading ...</h1>
           </div>
-      </main>
+      </LoadingStyle>
   )
 }
