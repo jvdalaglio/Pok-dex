@@ -10,10 +10,6 @@ export const Card = styled.div`
 
   position: relative;
 
-.info{
-  
-}
-
 .info__number{
   font-weight: 700;
   font-size: 12px;
