@@ -9,6 +9,7 @@ export function Home() {
 
   const[isLoading, setIsLoading] = useState(true);
   const[pokemonList, setPokemonList] = useState<CardPokemonProps[]>([]);
+  const [textoBusca, setTextoBusca] = useState("")
  
   async function getPokemonData() {
     const {data} = await api.get("/pokemon?limit=151");
@@ -44,16 +45,19 @@ export function Home() {
       <Nav />
       <Title>Encontre todos os pokémons em um só lugar</Title>
 
-      <Input type="text" placeholder="Buscar por NOME" />
+      <Input type="text" placeholder="Buscar por NOME ou ID" value={textoBusca} onChange={(event) => 
+        setTextoBusca(event.target.value)} />
 
       <List>
-        {pokemonList.length > 0 && pokemonList.map((pokemon, index) => {
+        {pokemonList
+        .filter(pokemon => pokemon.name.includes(textoBusca) || String(pokemon.id) === textoBusca)
+        .map((pokemon, index) => {
           return (
           <CardPokemon
           key={index} 
           id={pokemon.id} 
           name={pokemon.name} 
-          types={pokemon.types} 
+          types={pokemon.types}
           />
           );
           })}
