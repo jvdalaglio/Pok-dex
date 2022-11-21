@@ -1,4 +1,6 @@
-.card{
+import styled from "styled-components";
+
+export const Card = styled.div`
   width: 100%;
   width: 330px;
   min-height: 115px;
@@ -7,7 +9,6 @@
   padding: 20px;
 
   position: relative;
-}
 
 .info{
   
@@ -34,57 +35,59 @@
   right: 10px;
 }
 
-.card.type--bug {
+&.card.type--bug {
   background-color: #8bd674;
 }
-.card.type--dark {
+&.card.type--dark {
   background-color: #6f6e78;
 }
-.card.type--dragon {
+&.card.type--dragon {
   background-color: #7383b9;
 }
-.card.type--electric {
+&.card.type--electric {
   background-color: #f2cb55;
 }
-.card.type--fairy {
+&.card.type--fairy {
   background-color: #eba8c3;
 }
-.card.type--fighting {
+&.card.type--fighting {
   background-color: #eb4971;
 }
-.card.type--fire {
+&.card.type--fire {
   background-color: #ffa756;
 }
-.card.type--flying {
+&.card.type--flying {
   background-color: #83a2e3;
 }
-.card.type--ghost {
+&.card.type--ghost {
   background-color: #8571be;
 }
-.card.type--grass {
+&.card.type--grass {
   background-color: #8bbe8a;
 }
-.card.type--ground {
+&.card.type--ground {
   background-color: #f78551;
 }
-.card.type--ice {
+&.card.type--ice {
   background-color: #91d8df;
 }
-.card.type--normal {
+&.card.type--normal {
   background-color: #b5b9c4;
 }
-.card.type--poison {
+&.card.type--poison {
   background-color: #9f6e97;
 }
-.card.type--psychic {
+&.card.type--psychic {
   background-color: #ff6568;
 }
-.card.type--rock {
+&.card.type--rock {
   background-color: #d4c294;
 }
-.card.type--steel {
+&.card.type--steel {
   background-color: #4c91b2;
 }
-.card.type--water {
+&.card.type--water {
   background-color: #58abf6;
 }
+`
+
