@@ -3,7 +3,7 @@ import { Nav } from "../components/Nav/Nav";
 import { CardPokemon, CardPokemonProps } from "../components/CardPokemon/CardPokemon";
 import { api } from "../services/api";
 import { Loading } from "../components/Loading/Loading";
-import { Title, List } from "./Home.style";
+import { Title, List, Input } from "./Home.style";
 
 export function Home() {
 
@@ -43,6 +43,8 @@ export function Home() {
     <>
       <Nav />
       <Title>Encontre todos os pokémons em um só lugar</Title>
+
+      <Input type="text" placeholder="Buscar por NOME" />
 
       <List>
         {pokemonList.length > 0 && pokemonList.map((pokemon, index) => {

@@ -7,7 +7,7 @@ export const Title = styled.h1 `
   color: #17171b;
 
   max-width: 700px;
-  margin: 160px 0;
+  margin: 160px 0 70px;
 `
 
 export const List = styled.div `
@@ -15,4 +15,12 @@ export const List = styled.div `
   grid-template-columns: repeat(3, 1fr);
   row-gap: 50px;
   column-gap: 30px;
+`
+
+export const Input = styled.input`
+  width: 109%;
+  font-size: 1.2rem;
+  color: #17171b;
+  padding: 0.5rem 1rem;
+  margin-bottom: 90px;
 `
