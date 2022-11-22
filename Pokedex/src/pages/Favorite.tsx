@@ -48,7 +48,9 @@ export function Favorite() {
     <Nav />
     <Title text="Seus pokémons favoritos" />
     <List>
-    {pokemonList.map((pokemon, index) => {
+    {pokemonList.sort((a,b) => {
+      return a.id - b.id})
+    .map((pokemon, index) => {
       return(
         <CardPokemon
         key={index}
