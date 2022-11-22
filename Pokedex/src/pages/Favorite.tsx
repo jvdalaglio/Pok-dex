@@ -6,6 +6,7 @@ import { StoreState } from "../redux";
 import { CardPokemon, CardPokemonProps } from "../components/CardPokemon/CardPokemon";
 import { api } from "../services/api";
 import { Loading } from "../components/Loading/Loading";
+import { List } from "./Favorite.style"
 
 export function Favorite() {
   const [pokemonList, setPokemonList] = useState<CardPokemonProps[]>([]);
@@ -41,12 +42,12 @@ export function Favorite() {
       <Loading />
     );
   }
-  
+
   return (
     <>
     <Nav />
     <Title text="Seus pokémons favoritos" />
-
+    <List>
     {pokemonList.map((pokemon, index) => {
       return(
         <CardPokemon
@@ -55,8 +56,9 @@ export function Favorite() {
         name={pokemon.name}
         types={pokemon.types}
         />
-      )
-    })}
+        )
+      })}
+      </List>
     </>
     )
 }
