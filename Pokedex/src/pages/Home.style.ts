@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const Title = styled.h1 `
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 62px;
-  color: #17171b;
-
-  max-width: 700px;
-  margin: 160px 0 70px;
-`
-
 export const List = styled.div `
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -1,5 +1,12 @@
+import { Nav } from "../components/Nav/Nav";
+import { Title } from "../components/Title/Title";
+
 export function Favorite() {
   return (
-    <h1>olá</h1>
-  )
+    <>
+    <Nav />
+    <Title text="Seus pokémons favoritos" />
+    </>
+
+    )
 }

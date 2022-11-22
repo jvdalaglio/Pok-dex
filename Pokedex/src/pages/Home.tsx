@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Nav } from "../components/Nav/Nav";
 import { CardPokemon, CardPokemonProps } from "../components/CardPokemon/CardPokemon";
-import { api } from "../services/api";
 import { Loading } from "../components/Loading/Loading";
-import { Title, List, Input } from "./Home.style";
+import { Title } from "../components/Title/Title";
+import { api } from "../services/api";
+import { List, Input } from "./Home.style";
 
 export function Home() {
 
@@ -43,7 +44,7 @@ export function Home() {
   return (
     <>
       <Nav />
-      <Title>Encontre todos os pokémons em um só lugar</Title>
+      <Title text="Encontre todos os pokémons em um só lugar"/>
 
       <Input type="text" placeholder="Buscar por NOME ou ID" value={textoBusca} onChange={(event) => 
         setTextoBusca(event.target.value)} />
