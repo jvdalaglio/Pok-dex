@@ -13,6 +13,9 @@ export const favorite = createSlice({
   reducers: {
     add: (state, action) => {
       state.push(action.payload)
+      state.sort((a,b) => {
+        return a - b
+      })
       localStorage.setItem("@pokedex/favorite", JSON.stringify(state));
     },
     remove: (state, action) => {
