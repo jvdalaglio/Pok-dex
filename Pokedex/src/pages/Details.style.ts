@@ -48,7 +48,12 @@ export const Card = styled.div`
 border: 4px solid #62b957;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 20px;
-padding: 50px;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+width: 115%;
 
 .info__name {
   font-weight: 700;
@@ -111,7 +116,7 @@ padding: 50px;
   background-color: #91d8df;
   border-color: #61cec0;
 }
-&.type--noemal {
+&.type--normal {
   background-color: #b5b9c4;
   border-color: #9da0aa;
 }
