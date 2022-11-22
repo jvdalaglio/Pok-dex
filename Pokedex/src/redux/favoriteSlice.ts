@@ -15,4 +15,7 @@ export const favorite = createSlice({
       state.splice(index, 1);
     },
   }
-})
+});
+
+export const { add, remove } = favorite.actions;
+export default favorite.reducer;
