@@ -19,6 +19,7 @@ export const favorite = createSlice({
       const index = state.findIndex((item: number) => Number(item) === Number(action.payload)
       );
       state.splice(index, 1);
+      localStorage.setItem("@pokedex/favorite", JSON.stringify(state));
     },
   }
 });
