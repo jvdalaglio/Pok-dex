@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div` 
   height: calc(100vh - 4rem - 40px);
   display: flex;
-
 `
 
 export const Image = styled.img`
+`
 
+export const Button = styled.button`
+  padding: 0.5rem 1rem;
 `
 
 export const Card = styled.div`

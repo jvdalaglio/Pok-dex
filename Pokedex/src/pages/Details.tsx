@@ -1,16 +1,31 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux";
+import { Container, Image, Card, Button } from "./Details.style"
 import { Nav } from "../components/Nav/Nav";
-import { Container, Image, Card } from "./Details.style"
 import { Badge } from "../components/Badge/Badge";
 import { CardPokemonProps } from "../components/CardPokemon/CardPokemon";
-import { api } from "../services/api";
 import { Loading } from "../components/Loading/Loading";
+import { add, remove } from "../redux/favoriteSlice";
+import { api } from "../services/api";
+import { StoreState } from "../redux";
 
 export function Details() {
   const {id} = useParams();
+  const dispatch = useDispatch();
+  const ListaFavoritos = useSelector((state: StoreState) => state.favorite);
   const[isLoading, setIsLoading] = useState(true);
   const [pokemonData, setPokemonData] = useState<CardPokemonProps>({} as CardPokemonProps);
+
+  console.log(ListaFavoritos);
+
+  function handleClickAdd() {
+    dispatch(add(id));
+  }
+
+  function handleClickRemove() {
+    dispatch(remove(id));
+  }
 
   async function getPokemonData() {
     const {data} = await api.get(`/pokemon/${id}`);
@@ -48,6 +63,10 @@ export function Details() {
           {pokemonData.types.map((item, index) => {
             return <Badge key={index} name={item.type.name} />
           })}
+          {ListaFavoritos.find(pokemon => Number(pokemon) === Number(id)) ? 
+          (<Button onClick={handleClickRemove}>Remover dos favoritos</Button>) : 
+          (<Button onClick={handleClickAdd}>Adicionar aos favoritos</Button>)
+          }
       </>
     </Card>
 
