@@ -9,7 +9,7 @@ export function Home() {
 
   const[isLoading, setIsLoading] = useState(true);
   const[pokemonList, setPokemonList] = useState<CardPokemonProps[]>([]);
-  const [textoBusca, setTextoBusca] = useState("")
+  const [textoBusca, setTextoBusca] = useState("");
  
   async function getPokemonData() {
     const {data} = await api.get("/pokemon?limit=151");
