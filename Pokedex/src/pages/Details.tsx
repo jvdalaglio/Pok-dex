@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux";
-import { Container, Image, Card, Button } from "./Details.style"
+import { Container, Image, Card, Button, Label, Value } from "./Details.style"
 import { Nav } from "../components/Nav/Nav";
 import { Badge } from "../components/Badge/Badge";
 import { CardPokemonProps } from "../components/CardPokemon/CardPokemon";
@@ -10,12 +10,17 @@ import { add, remove } from "../redux/favoriteSlice";
 import { api } from "../services/api";
 import { StoreState } from "../redux";
 
+type DetailsProps = CardPokemonProps & {
+  heigth: number,
+  weight: number;
+}
+
 export function Details() {
   const {id} = useParams();
   const dispatch = useDispatch();
   const ListaFavoritos = useSelector((state: StoreState) => state.favorite);
   const[isLoading, setIsLoading] = useState(true);
-  const [pokemonData, setPokemonData] = useState<CardPokemonProps>({} as CardPokemonProps);
+  const [pokemonData, setPokemonData] = useState<DetailsProps>({} as DetailsProps);
 
   console.log(ListaFavoritos);
 
@@ -33,6 +38,8 @@ export function Details() {
       id: data.id,
       name: data.name,
       types: data.types,
+      heigth: data.height/10,
+      weight: data.weight/10,
     });
     setIsLoading(false);
   }
@@ -63,6 +70,10 @@ export function Details() {
           {pokemonData.types.map((item, index) => {
             return <Badge key={index} name={item.type.name} />
           })}
+          <Label>Peso</Label>
+          <Value>{pokemonData.weight}kg</Value>
+          <Label>Tamanho</Label>
+          <Value>{pokemonData.heigth}m</Value>
           {ListaFavoritos.find(pokemon => Number(pokemon) === Number(id)) ? 
           (<Button onClick={handleClickRemove}>Remover dos favoritos</Button>) : 
           (<Button onClick={handleClickAdd}>Adicionar aos favoritos</Button>)

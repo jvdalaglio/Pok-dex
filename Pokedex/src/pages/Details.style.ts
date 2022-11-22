@@ -3,13 +3,45 @@ import styled from "styled-components";
 export const Container = styled.div` 
   height: calc(100vh - 4rem - 40px);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+
+  @media only screen and (max-width: 1000px) {
+    height: 100%;
+    flex-direction: column;
+  }
 `
 
 export const Image = styled.img`
+  width: 90%;
 `
 
 export const Button = styled.button`
+  margin-top: 12px;
   padding: 0.5rem 1rem;
+  color: rgba(23, 23, 27, 0.6);
+  font-weight: 600;
+  font-size: 24px;
+  background-color: #ffffff;
+  border: transparent;
+  border-radius: 8px;
+`
+
+export const Label = styled.span`
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  color: rgba(23, 23, 27, 0.6);
+`
+
+export const Value = styled.p`
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+  color: #ffffff;
 `
 
 export const Card = styled.div`
