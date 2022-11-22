@@ -22,8 +22,6 @@ export function Details() {
   const[isLoading, setIsLoading] = useState(true);
   const [pokemonData, setPokemonData] = useState<DetailsProps>({} as DetailsProps);
 
-  console.log(ListaFavoritos);
-
   function handleClickAdd() {
     dispatch(add(id));
   }
