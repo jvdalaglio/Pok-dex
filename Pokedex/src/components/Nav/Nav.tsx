@@ -14,8 +14,10 @@ export function Nav(props: NavProps) {
   return (
     <NavBar className="nav">
       <Link to="/" className="brand">Pokédex</Link>
-      <div>  
+      <div>
+      <Link to="/favorite">
       <TotalPokemons>Total de favoritos: {totalPokemon.length} </TotalPokemons>
+      </Link>
       {props.hasGoBack && (<BtnGoBack to="/">voltar</BtnGoBack>)}
       </div>
     </NavBar>
